@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prroxzy's Mods</title>
+
+    <meta property="og:title" content="Prroxzy's Mods">
+    <meta property="og:description" content="Prroxzy's Mods">
+    <meta property="og:url" content="https://prroxzy.github.io/mods/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: auto;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            color: white;
+            margin: 20px 0;
+            animation: fadeInTitle 2s ease-out forwards;
+        }
+
+        @keyframes fadeInTitle {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: inline-block;
+            width: calc(100% - 40px);
+            max-width: 600px;
+            box-shadow: 0 0 30px limegreen, 0 0 60px lime;
+            animation: pulse 3s infinite;
+        }
+
+        .menu h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .menu p {
+            color: white;
+            font-size: 18px;
+            margin: 5px 0 15px;
+        }
+
+        .download-btn {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px limegreen;
+        }
+
+        .download-btn:hover {
+            background-color: purple;
+            box-shadow: 0 0 30px purple, 0 0 60px purple;
+            transform: scale(1.05);
+        }
+
+        .star {
+            width: 4px;
+            height: 4px;
+            background: purple;
+            position: absolute;
+            animation: twinkling 3s infinite ease-in-out;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        @keyframes twinkling {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes moveStars {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 30px purple, 0 0 60px purple;
+            }
+            50% {
+                box-shadow: 0 0 40px purple, 0 0 80px purple;
+            }
+            100% {
+                box-shadow: 0 0 30px purple, 0 0 60px purple;
+            }
+        }
+
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            animation: moveStars 30s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="star-container">
+        <script>
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = Math.random() * 200 + 'vh';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.animationDuration = Math.random() * 2 + 1 + 's';
+                document.querySelector('.star-container').appendChild(star);
+            }
+        </script>
+    </div>
+
+    <h1>Prroxzy's Mods</h1>
+    <p>Welcome to the official page of Prroxzy's Mods.</p>
+    <p>Owner - Prroxzy</p>
+    <p>Developed by - TCGMonk</p>
+
+    <h1>----------------------------</h1>
+    <h1>Metadata's</h1>
+    <p>This part of the website contains dlls. Dlls are functions and data that can be used by another module.</p>
+    <div class="menu">
+        <h2>Big scary</h2>
+        <p>Visual inf bananas, custom os and custom fps.</p>
+        <p>Version 2</p>
+        <p>Outdated = false</p>
+        <a href="" download class="download-btn">Download</a>
+    </div>
+
+    <div class="menu">
+        <h2>Big scary</h2>
+        <p>Visual inf bananas, custom os and custom fps.</p>
+        <p>Version 2</p>
+        <p>Outdated = false</p>
+        <a href="" download class="download-btn">Download</a>
+    </div>
+
+    <div class="menu">
+        <h2>Big scary</h2>
+        <p>Visual inf bananas, custom os and custom fps.</p>
+        <p>Version 2</p>
+        <p>Outdated = false</p>
+        <a href="" download class="download-btn">Download</a>
+    </div>
+    <h1>----------------------------</h1>
+    <h1>Modded Apks</h1>
+    <p>This part of the website contains modded apks. Modded apks are Apks that are modified, self-explanatory.</p>
+
+    <div class="menu">
+        <h2>Flimcy Tag</h2>
+        <p>Made by: Prroxzy</p>
+        <a href="" download class="download-btn">Download APK</a>
+    </div>
+</body>
+</html>
